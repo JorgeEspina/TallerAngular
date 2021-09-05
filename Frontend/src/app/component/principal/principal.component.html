@@ -1,0 +1,278 @@
+<!--::header part start::-->
+<header class="main_menu home_menu">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="l">
+            <img src="assets/img/shape1.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="menu_icon"><i class="fas fa-bars"></i></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse main-menu-item"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Catalogo">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href=""
+                  id="navbarDropdown_1"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                  <a
+                    class="dropdown-item"
+                    routerLink="/Listado/Producto/Subasta"
+                  >
+                    Listado de Productos Subastados</a
+                  >
+                  <a class="dropdown-item" routerLink="/Producto/Subasta">
+                    Producto a Subastar</a
+                  >
+                  <a class="dropdown-item" routerLink="/Inventario">
+                    Inventario</a
+                  >
+                  <a class="dropdown-item" routerLink="/Producto">
+                    Agregar Producto</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href=""
+                  id="navbarDropdown_3"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Compras
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                  <a class="dropdown-item" routerLink="/Favoritos">Favoritos</a>
+                  <a class="dropdown-item" routerLink="/ListaSubasta"
+                    >Subasta</a
+                  >
+                  <a class="dropdown-item" routerLink="/Carrito"
+                    >Carrito de Compra</a
+                  >
+                  <a class="dropdown-item" routerLink="/Facturacion"
+                    >Facturacion</a
+                  >
+                  <!--<a class="dropdown-item" routerLink="/Ordenes">Ordenes</a>-->
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  [routerLink]="['Registrarse/Actualizar/', usuario.id]"
+                  id="navbarDropdown_4"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img
+                    [src]="
+                      usuario.foto == ''
+                        ? '../../../assets/img/avatar.png'
+                        : usuario.foto
+                    "
+                    class="rounded-circle"
+                    width="40"
+                    height="40"
+                  />{{ usuario.nombre == "" ? "Sesion" : usuario.nombre }}
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown_41w">
+                  <a
+                    class="dropdown-item"
+                    routerLink="/Login"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    ><i class="fab fa-500px"></i>Login</a
+                  >
+
+                  <a
+                    class="dropdown-item"
+                    routerLink="/Registrarse"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    ><i class="far fa-edit"></i>Registro</a
+                  >
+                </div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown_4">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    (click)="onLogout()"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    ><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Header part end-->
+<!--================Home Banner Area =================-->
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <h2>Menu</h2>
+            <p>Home <span>-</span> Publicaciones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!--================Category Product Area =================-->
+<section class="cat_product_area section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              class="
+                product_top_bar
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="single_product_menu">
+                <p>
+                  <!--<span>10000 </span>-->
+                  Publicaciones encontrados
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center latest_product_inner">
+          <div class="col-lg-6 col-sm-6">
+            <div class="single_product_item">
+              <img
+                src="https://w7.pngwing.com/pngs/681/151/png-transparent-nike-t-shirt-shorts-dri-fit-sportswear-nike-blue-active-shirt-jersey.png"
+                alt=""
+              />
+              <div class="single_product_text">
+                <h4>Short Adidas</h4>
+                <h3>$150.00</h3>
+                <a [routerLink]="['/Producto/Carrito', 01]" class="add_cart"
+                  >+ Ver Producto<i class="ti-heart"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="single_product_item">
+              <img
+                src="https://w7.pngwing.com/pngs/681/151/png-transparent-nike-t-shirt-shorts-dri-fit-sportswear-nike-blue-active-shirt-jersey.png"
+                alt=""
+              />
+              <div class="single_product_text">
+                <h4>Short Adidas</h4>
+                <h3>$150.00</h3>
+                <a [routerLink]="['/Producto/Carrito', 01]" class="add_cart"
+                  >+ Ver Producto<i class="ti-heart"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <div class="single_product_item">
+              <img
+                src="https://w7.pngwing.com/pngs/681/151/png-transparent-nike-t-shirt-shorts-dri-fit-sportswear-nike-blue-active-shirt-jersey.png"
+                alt=""
+              />
+              <div class="single_product_text">
+                <h4>Short Adidas</h4>
+                <h3>$150.00</h3>
+                <a [routerLink]="['/Producto/Carrito', 01]" class="add_cart"
+                  >+ Ver Producto<i class="ti-heart"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!--<div class="col-lg-4 col-sm-6" *ngFor="let Producto of productos">           
+            <div class="single_product_item">
+              <img [src]="Producto.foto" alt="" />
+              <div class="single_product_text">
+                <a (click)="AgregarFavoritos(Producto.id_producto)"
+                  ><i class="ti-heart"></i
+                ></a>
+                <h4>{{ Producto.nombre }}</h4>
+                <a
+                  [routerLink]="['/Producto/Carrito', Producto.id_producto]"
+                  class="add_cart"
+                  >+ Ver Producto</a
+                >
+              </div>
+            </div>
+          </div>-->
+          <div class="col-lg-12">
+            <div class="pageination">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <i class="ti-angle-double-left"></i>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">6</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <i class="ti-angle-double-right"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================End Category Product Area =================-->

@@ -1,0 +1,74 @@
+<!--================login_part Area =================-->
+<section class="login_part padding_top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_text text-center">
+          <div class="login_part_text_iner">
+            <div class="single_product_item">
+              <img src="../../../assets/img/home-banner.png" alt="" />
+            </div>
+            <h2>Nuevo en la tienda?</h2>
+            <p>puedes crear tu cuenta en el siguiente formulario</p>
+            <a routerLink="/Registro" class="btn_3">Creacion de cuenta</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_form">
+          <div class="login_part_form_iner">
+            <h3>
+              Bienvenido ! <br />
+              Inicia sesion
+            </h3>
+            <form
+              class="row contact_form"
+              action="#"
+              method="post"
+              novalidate="novalidate"
+            >
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  value=""
+                  [(ngModel)]="usuario.email"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  value=""
+                  [(ngModel)]="usuario.contrasena"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <div class="creat_account d-flex align-items-center">
+                  <input type="checkbox" id="f-option" name="selector" />
+                  <label for="f-option">Remember me</label>
+                </div>
+                <button
+                  type="submit"
+                  value="submit"
+                  class="btn_3"
+                  (click)="UsuarioExistente()"
+                  id="loginbtn"
+                >
+                  Iniciar Sesion
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================login_part end =================-->

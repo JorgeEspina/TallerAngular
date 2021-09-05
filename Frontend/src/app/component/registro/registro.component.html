@@ -1,0 +1,165 @@
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb_iner">
+          <div class="breadcrumb_iner_item">
+            <!--<h2>Registro</h2>-->
+            <h2>Registro de Clientes</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- breadcrumb start-->
+
+<!--================Registry_part Area =================-->
+<section class="login_part padding_top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_text text-center">
+          <div class="login_part_text_iner">
+            <div class="single_product_item">
+              <img
+                [src]="
+                  usuario.foto == ''
+                    ? '../../../assets/img/avatar.png'
+                    : usuario.foto
+                "
+                alt=""
+              />
+            </div>
+            <h2 *ngIf="!isLogged">Nuevo en la tienda?</h2>
+            <p *ngIf="!isLogged">
+              al crear tu cuenta tendras muchos beneficios
+            </p>
+
+            <a class="btn_3" href="">Regresar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="login_part_form">
+          <div class="login_part_form_iner">
+            <h3 *ngIf="!isLogged">
+              Bienvenido ! <br />
+              Registro de Usuarios
+            </h3>
+            <h3 *ngIf="isLogged">Perfil</h3>
+            <form action="">
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  value=""
+                  placeholder="Nombre"
+                  [(ngModel)]="usuario.nombre"
+                  autofocus
+                />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellido"
+                  name="apelido"
+                  value=""
+                  placeholder="Apellido"
+                  [(ngModel)]="usuario.apellido"
+                  autofocus
+                />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  value=""
+                  placeholder="Correo Electronico"
+                  [(ngModel)]="usuario.email"
+                  autofocus
+                />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="telefono"
+                  name="Telefono"
+                  value=""
+                  placeholder="Telefono"
+                  [(ngModel)]="usuario.celular"
+                />
+              </div>
+              <div class="col-md-12 form-group p_star">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  value=""
+                  placeholder="Password"
+                  [(ngModel)]="usuario.contrasena"
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <button
+                  type="submit"
+                  value="submit"
+                  class="btn_3"
+                  (click)="modificar ? ActualizarPerfil() : Registrarse()"
+                >
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--================Registry_part end =================-->
+<!--::footer_part start::-->
+<footer class="footer_part">
+  <div class="copyright_part">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8"></div>
+        <div class="col-lg-4">
+          <div class="footer_icon social_icon">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="single_social_icon"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="single_social_icon"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="single_social_icon"
+                  ><i class="fas fa-globe"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="single_social_icon"
+                  ><i class="fab fa-behance"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--::footer_part end::-->
